@@ -1,8 +1,8 @@
 {
-  "name": "Start on Heroku: Node.js",
-  "description": "A barebones Node.js app using Express 4",
-  "repository": "https://github.com/heroku/node-js-getting-started",
+  "name": "Sublivion's Website 1",
+  "description": "Node JS Website",
+  "repository": "https://github.com/Sublivion/website1",
   "logo": "http://node-js-sample.herokuapp.com/node.svg",
-  "keywords": ["node", "express", "heroku"],
+  "keywords": ["node", "website", "heroku"],
   "image": "heroku/nodejs"
 }
