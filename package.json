@@ -1,0 +1,9 @@
+{
+  "name": "node-website",
+  "version": "0.0.0",
+  "description": "NodeWebsite",
+  "main": "server.js",
+  "author": {
+    "name": "obrie_srkzgw7"
+  }
+}
