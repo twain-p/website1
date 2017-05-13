@@ -10,5 +10,8 @@ http.createServer(function (req, res) {
         if (req.url == '/') { // If the url is empty, == because req.url may not be string or whatever
             webpages.Home(req, res);
         }
+        if (req.url == "/styles") {
+            webpages.Styles(req, res);
+        }
     }
 }).listen(port);
