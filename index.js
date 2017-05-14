@@ -16,7 +16,7 @@ http.createServer(function (req, res) {
         else if (req.url == "/trailers") {
             webpages.Trailers(req, res);
         }
-        else if (req.url == "/tescotrailer?") {
+        else if (req.url.substring(0, 13) == "/tescotrailer") {
             webpages.TescoTrailer(req, res);
         }
         else if (req.url == "/navbar") {
