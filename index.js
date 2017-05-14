@@ -10,8 +10,17 @@ http.createServer(function (req, res) {
         if (req.url == '/') { // If the url is empty, == because req.url may not be string or whatever
             webpages.Home(req, res);
         }
-        if (req.url == "/styles") {
+        else if (req.url == "/styles") {
             webpages.Styles(req, res);
+        }
+        else if (req.url == "/trailers") {
+            webpages.Trailers(req, res);
+        }
+        else if (req.url == "/tescotrailer?") {
+            webpages.TescoTrailer(req, res);
+        }
+        else {
+            webpages.NotFound(req, res);
         }
     }
 }).listen(port);
