@@ -22,6 +22,15 @@ http.createServer(function (req, res) {
         else if (req.url == "/navbar") {
             webpages.Navbar(req, res);
         }
+        else if (req.url.substring(0, 13) == "/argostrailer") {
+            webpages.ArgosTrailer(req, res);
+        }
+        else if (req.url.substring(0, 18) == "/sainsburystrailer") {
+            webpages.SainsburysTrailer(req, res);
+        }
+        else if (req.url.substring(0, 16) == "/waitrosetrailer") {
+            webpages.waitroseTrailer(req, res);
+        }
         else {
             webpages.NotFound(req, res);
         }
