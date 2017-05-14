@@ -19,6 +19,9 @@ http.createServer(function (req, res) {
         else if (req.url == "/tescotrailer?") {
             webpages.TescoTrailer(req, res);
         }
+        else if (req.url == "/navbar") {
+            webpages.Navbar(req, res);
+        }
         else {
             webpages.NotFound(req, res);
         }

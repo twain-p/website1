@@ -28,3 +28,8 @@ exports.Trailers = function (req, res) {
     res.writeHead(200, { 'Content-Type': 'text/html' });
     fs.createReadStream('./pages/trailers.html').pipe(res);
 }
+
+exports.Navbar = function (req, res) {
+    res.writeHead(200, { 'Content-Type': 'text/html' });
+    fs.createReadStream('./assets/navbar.html').pipe(res);
+}
