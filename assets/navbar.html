@@ -1,0 +1,108 @@
+<!--
+
+  Work in progress to get this working without jQuery, then to tweak things and finalize
+
+-->
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+  <script src="https://use.fontawesome.com/cf0db76141.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <style>
+    #navbar {
+      background-color: #444;
+      width: auto;
+      overflow: auto;
+    }
+
+    #navbar .p {
+      color: #fff;
+      float: right;
+      margin-right: 3%;
+      font-size: 24px;
+      padding: 5px;
+      border-radius: 5px;
+      font-family: Verdana;
+      transition: 0.5s ease;
+    }
+
+    #navbar .p:hover {
+      background-color: #555;
+    }
+
+    #bars {
+      color: #fff;
+      float: left;
+      margin-left: 3%;
+      padding: 5px;
+      padding-top: 7px;
+      border-radius: 5px;
+      font-size: 24px;
+      transition: 0.5s ease;
+    }
+
+    #bars:hover {
+      background-color: #555;
+    }
+
+    #menu {
+      background-color: #808080;
+      max-width: 30%;
+      transition: margin-left .5s;
+      position: fixed;
+    }
+
+    #menu p {
+      font-size: 12px;
+      font-family: Verdana;
+      font-weight: 100;
+      display: block;
+      padding: 40px;
+      transition: 0.5s ease;
+    }
+
+    #menu i {
+      font-size: 36px;
+      display: block;
+      padding: 30px;
+      text-align: center;
+      transition: 0.5s ease;
+    }
+
+    #menu p:hover, #menu i:hover {
+      background-color: #444;
+    }
+  </style>
+
+  <script>
+     $("document").ready(function() {
+      $("#bars").click(function() {
+        $("#menu").animate({width:'toggle'},350);
+      });
+    });
+
+  </script>
+</head>
+<body>
+    <div id="navbar">
+      <p class="p">Sublivion</p>
+  		<p class="fa fa-bars" id="bars" onclick="openNav()"></p>
+    </div>
+
+    <div id="menu">
+      <i class="fa fa-close" onclick="closeNav"></i>
+      <p>Option 1</p>
+      <p>Option 2</p>
+      <p>Option 3</p>
+      <p>Option 4</p>
+      <p>Option 5</p>
+    </div>
+
+    <!-- <p style="font-size: 150px; text-align: center; font-family: Segoe UI Light; color: #888;">Test Content</p> -->
+</body>
+</html>
