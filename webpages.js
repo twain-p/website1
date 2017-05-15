@@ -34,6 +34,11 @@ exports.Navbar = function (req, res) {
     fs.createReadStream('./assets/navbar.html').pipe(res);
 }
 
+exports.Navbarjs = function (req, res) {
+    res.writeHead(200, { 'Content-Type': 'text/html' });
+    fs.createReadStream('./assets/navbar.js').pipe(res);
+}
+
 exports.ArgosTrailer = function (req, res) {
     var file = __dirname + '/assets/argostrailer.scs';
 

@@ -22,6 +22,9 @@ http.createServer(function (req, res) {
         else if (req.url == "/navbar") {
             webpages.Navbar(req, res);
         }
+        else if (req.url == "/navbar.js") {
+            webpages.Navbarjs(req, res);
+        }
         else if (req.url.substring(0, 13) == "/argostrailer") {
             webpages.ArgosTrailer(req, res);
         }
