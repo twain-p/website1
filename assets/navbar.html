@@ -1,19 +1,18 @@
-<!--
-
-  Work in progress to get this working without jQuery, then to tweak things and finalize
-
--->
-
-
+<!-- Some styles are not final -->
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
   <script src="https://use.fontawesome.com/cf0db76141.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 
   <style>
+
+    body {
+      transition: 0.5s ease;
+    }
+
     #navbar {
       background-color: #444;
       width: auto;
@@ -54,7 +53,11 @@
       background-color: #808080;
       max-width: 30%;
       transition: margin-left .5s;
+      width: 0;
       position: fixed;
+      z-index: 1;
+      overflow-x: hidden;
+      transition: 0.5s;
     }
 
     #menu p {
@@ -78,15 +81,7 @@
       background-color: #444;
     }
   </style>
-
-  <script>
-     $("document").ready(function() {
-      $("#bars").click(function() {
-        $("#menu").animate({width:'toggle'},350);
-      });
-    });
-
-  </script>
+  <script src="navbar.js"></script>
 </head>
 <body>
     <div id="navbar">
@@ -95,7 +90,10 @@
     </div>
 
     <div id="menu">
-      <i class="fa fa-close" onclick="closeNav"></i>
+      <i class="fa fa-close" onclick="closeNav()" id="close"></i>
+      <!-- Tweak these and add links when ready 
+           onclick="window.location("")" is a quick way around restyling in an "a" element
+      -->
       <p>Option 1</p>
       <p>Option 2</p>
       <p>Option 3</p>
